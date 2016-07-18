@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jul, 2016 7:49:39 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Register" table="REGISTER" schema="JUSCO">
+        <id name="username" type="int">
+            <column name="USERNAME" precision="6" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50" />
+        </property>
+        <property name="telephone" type="java.lang.Long">
+            <column name="TELEPHONE" precision="10" scale="0" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="30" />
+        </property>
+        <property name="confirm" type="string">
+            <column name="CONFIRM" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

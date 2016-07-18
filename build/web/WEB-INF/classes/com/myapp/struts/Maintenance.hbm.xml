@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jul, 2016 7:49:39 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Maintenance" table="MAINTENANCE" schema="JUSCO">
+        <id name="equipment" type="string">
+            <column name="EQUIPMENT" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="area" type="string">
+            <column name="AREA" length="20" />
+        </property>
+        <property name="frequency" type="string">
+            <column name="FREQUENCY" length="20" />
+        </property>
+        <property name="maintenancedate" type="string">
+            <column name="MAINTENANCEDATE" length="20" />
+        </property>
+        <property name="inspected" type="string">
+            <column name="INSPECTED" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

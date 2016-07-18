@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jul, 2016 7:49:39 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.myapp.struts.Compliance" table="COMPLIANCE" schema="JUSCO">
+        <id name="compliancedate" type="string">
+            <column name="COMPLIANCEDATE" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
