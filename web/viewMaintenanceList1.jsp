@@ -74,13 +74,23 @@
         int day = Integer.parseInt(md.substring(0, 2));
         int month = Integer.parseInt(md.substring(3,5));
         int year = Integer.parseInt(md.substring(6,10));
-        int nday = day;
-        int nmonth,nyear;
-        if(month>=7)
-            nmonth = month-6;
-        else nmonth = month+6 ;
-        nyear= year+1;
-        out.println("Date" + nday + "-" + nmonth + "-" + nyear+ "<br>");
+        String freq = c.getFrequency();
+        int frequency = Integer.parseInt(freq.substring(0,2));
+       
+        int tempYear;
+ int tempMonth;
+ int tempDate;
+ tempDate=day;
+ tempYear=frequency/12;
+ tempYear=year+tempYear;
+ tempMonth=frequency%12;
+ tempMonth=month+tempMonth;
+if(tempMonth>12)
+ {
+ tempMonth=tempMonth%12;
+ tempYear++;
+ }
+        out.println("Date" + tempDate + "-" + tempMonth + "-" + tempYear+ "<br>");
         %>
         </td>
     </tr>
